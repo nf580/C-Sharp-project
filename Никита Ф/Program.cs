@@ -1,153 +1,153 @@
-﻿//УРОК 1
-//Задание 1
-//Console.WriteLine("Hello world!");
-//Console.WriteLine("Никита");
+﻿/*УРОК 1
+Задание 1
+Console.WriteLine("Hello world!");
+Console.WriteLine("Никита");
 
-//Задание 2
-//string word = "Hello World!";
-//Console.WriteLine("Привет мир!");
-//Console.WriteLine(word);
+Задание 2
+string word = "Hello World!";
+Console.WriteLine("Привет мир!");
+Console.WriteLine(word);
 
-//Задание 3
-//string name = "Никита";
-//int age = 14;
-//double height = 170.2;
-//bool answer = true;
-//Console.WriteLine("Имя: " + name);
-//Console.WriteLine("Возраст: " + age);
-//Console.WriteLine("Рост: " + height);
-//Console.WriteLine("Нравится ли мне программировать: " + answer);
+Задание 3
+string name = "Никита";
+int age = 14;
+double height = 170.2;
+bool answer = true;
+Console.WriteLine("Имя: " + name);
+Console.WriteLine("Возраст: " + age);
+Console.WriteLine("Рост: " + height);
+Console.WriteLine("Нравится ли мне программировать: " + answer);
 
-//Задание 4
-//string name = "Никита";
-//char firstLetter = 'Н';
-//Console.WriteLine(name);
-//Console.WriteLine(firstLetter);
-//Если заменить переменную firstLetter на текст, выдадет ошибку
+Задание 4
+string name = "Никита";
+char firstLetter = 'Н';
+Console.WriteLine(name);
+Console.WriteLine(firstLetter);
+Если заменить переменную firstLetter на текст, выдадет ошибку
 
-//Задание 5
-//const int daysInWeek = 7;
-//int age = 14;
-//Console.WriteLine("Кол-во дней в неделе: " + daysInWeek);
-//Console.WriteLine("Возраст: " +  age);
-//Если попробовать поменять значение daysInWeek, то выдадет ошибку
+Задание 5
+const int daysInWeek = 7;
+int age = 14;
+Console.WriteLine("Кол-во дней в неделе: " + daysInWeek);
+Console.WriteLine("Возраст: " + age);
+Если попробовать поменять значение daysInWeek, то выдадет ошибку
 
-//Задание 6
-//int a = 3;
-//int b = 6;
-//Console.WriteLine("Сумма чисел: " + (a + b));
-//Console.WriteLine("Разность чисел: " + (a - b));
-//Console.WriteLine("Произведение чисел: " + (a * b));
-//Console.WriteLine("Частное чисел: " + (a / b));
+Задание 6
+int a = 3;
+int b = 6;
+Console.WriteLine("Сумма чисел: " + (a + b));
+Console.WriteLine("Разность чисел: " + (a - b));
+Console.WriteLine("Произведение чисел: " + (a * b));
+Console.WriteLine("Частное чисел: " + (a / b));
 
-//Задание 7
-//int a = 10;
-//int b = 20;
-//a += 10;
-//b -= 30;
-//Console.WriteLine(a);
-//Console.WriteLine(b);
+Задание 7
+int a = 10;
+int b = 20;
+a += 10;
+b -= 30;
+Console.WriteLine(a);
+Console.WriteLine(b);
 
-//Задание 8
-//double height = 3;
-//double width = 5.5;
-//Console.WriteLine("Площадь прямоугольника: " + (height * width));
-//Console.WriteLine("Периметр прямоугольника: " + (height + width) * 2);
+Задание 8
+double height = 3;
+double width = 5.5;
+Console.WriteLine("Площадь прямоугольника: " + (height * width));
+Console.WriteLine("Периметр прямоугольника: " + (height + width) * 2);
 
-//Задание 9
-//int first = 350;
-//int second = 120;
-//int discount = 50;
-//Console.WriteLine("Стоимость товаров со скидкой: " + ((first + second) - discount));
+Задание 9
+int first = 350;
+int second = 120;
+int discount = 50;
+Console.WriteLine("Стоимость товаров со скидкой: " + ((first + second) - discount));
 
-//Задание 10
-//int number = 42;
-//int a = 25;
-//int b = 5;
-//int c = 38;
-//number = number + a - b + c;
-//Console.WriteLine(number);
+Задание 10
+int number = 42;
+int a = 25;
+int b = 5;
+int c = 38;
+number = number + a - b + c;
+Console.WriteLine(number);
 
-//Задание 11
-//int a = 10;
-//int b = 5;
-//int c = 2;
-//int fifty = a * b;
-//Console.WriteLine(fifty);
-//int hundred = a * b * c;
-//Console.WriteLine(hundred);
-
-
-//Шифр ЦЕЗАРЯ
-//char[] letters = { 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', };
-//Console.WriteLine("Введите слово :");
-//string userWord = Console.ReadLine();
-//Console.WriteLine("На сколько символов нужно шифровать? ");
-//int colvo = int.Parse(Console.ReadLine());
-//int n = 0;
-//int l = userWord.Length;
-
-//while (n<=l)
-//{
+Задание 11
+int a = 10;
+int b = 5;
+int c = 2;
+int fifty = a * b;
+Console.WriteLine(fifty);
+int hundred = a * b * c;
+Console.WriteLine(hundred);
 
 
-//    char itog = letters[n + colvo];
-//    Console.WriteLine(itog);
-//    n = n + 1;
+Шифр ЦЕЗАРЯ
+char[] letters = { 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', };
+Console.WriteLine("Введите слово :");
+string userWord = Console.ReadLine();
+Console.WriteLine("На сколько символов нужно шифровать? ");
+int colvo = int.Parse(Console.ReadLine());
+int n = 0;
+int l = userWord.Length;
 
-//}  //НЕДОДЕЛАНО
+while (n <= l)
+{
+
+
+char itog = letters[n + colvo];
+Console.WriteLine(itog);
+n = n + 1;
+
+}  //НЕДОДЕЛАНО
 
 class Program
 {
     static void Main()
     {
-        //Урок 2
+        Урок 2
 
-        //Калькулятор, задание 8
-        //Console.WriteLine("Введите первое число: ");
-        //int first = int.Parse(Console.ReadLine());
-        //Console.WriteLine("Введите второе число: ");
-        //int second = int.Parse(Console.ReadLine());
-        //Console.WriteLine("Введите тип операции: *,/,+,-");
-        //string type = Console.ReadLine();
+        Калькулятор, задание 8
+        Console.WriteLine("Введите первое число: ");
+        int first = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите второе число: ");
+        int second = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите тип операции: *,/,+,-");
+        string type = Console.ReadLine();
 
-        //int result = 0;
-        //bool error = true;
-        //switch (type)
-        //{
-        //    case "+":
-        //        result = first + second;
-        //        break;
-        //    case "-":
-        //        result = first - second;
-        //        break;
-        //    case "*":
-        //        result = first * second;
-        //        break;
-        //    case "/":
-        //        if (second != 0)
-        //        {
-        //            result = first / second;
-        //            break;
-        //        }
-        //        else
-        //        {
-        //            error = false; Console.WriteLine("Ошибка, делить на 0 нельзя")
-        //            break;
-        //        }
-        //    default:
-        //        Console.WriteLine("Ошибка, введите *, /, + или -");
-        //        break;
-        //}
-        //if (error = true)
-        //{
-        //    Console.WriteLine(result);
-        //}
+        int result = 0;
+        bool error = true;
+        switch (type)
+        {
+            case "+":
+                result = first + second;
+                break;
+            case "-":
+                result = first - second;
+                break;
+            case "*":
+                result = first * second;
+                break;
+            case "/":
+                if (second != 0)
+                {
+                    result = first / second;
+                    break;
+                }
+                else
+                {
+                    error = false; Console.WriteLine("Ошибка, делить на 0 нельзя");
+                    break;
+                }
+            default:
+                Console.WriteLine("Ошибка, введите *, /, + или -");
+                break;
+        }
+        if (error == true)
+        {
+            Console.WriteLine(result);
+        }
 
-        //Задание 13
-        //Калькулятор доставки
-        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Пиццерия у дома~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        //Получение данных
+        Задание 13
+        Калькулятор доставки
+        /*Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Пиццерия у дома~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Получение данных
         Console.WriteLine("Введите название товара: ");
         string name = Console.ReadLine();
         Console.WriteLine("Введите стоимость товара (в рублях): ");
@@ -160,70 +160,49 @@ class Program
         int type = int.Parse(Console.ReadLine());
         int priceWeight = 0;
         string tip = "Обычная";
-        //Обработка данных
-        //Проверка ввода
-        
-        if (type > 3 & type<1)
+        Обработка данных
+        Проверка ввода
+
+
+
+        if (type > 3 && type < 1)
         {
             Console.WriteLine("Ошибка, вводите либо 1, либо 2, либо 3");
             return;
         }
         else
         {
-            //Стоимость
+            if (weight <= 1)
+            {
+                priceWeight = 100;
+            }
+            else if (weight > 1 && weight <= 5)
+            {
+                priceWeight = 200;
+            }
+            else if (weight > 5 && weight <= 10)
+            {
+                priceWeight = 350;
+            }
+            else if (weight > 10)
+            {
+                priceWeight = 500;
+            }
+            else if (price > 5000)
+            {
+                priceWeight = 0;
+            }
+            else if (weight < 0 || weight == 0)
+            {
+                Console.WriteLine("Ошибка, вес не может быть отрицательным");
+            }
+            
+            Стоимость
             switch (type)
             {
-                case 1:
-                    if (weight <= 1)
-                    {
-                        priceWeight = 100;
-                    }
-                    else if (weight > 1 & weight <= 5)
-                    {
-                        priceWeight = 200;
-                    }
-                    else if (weight > 5 & weight <= 10)
-                    {
-                        priceWeight = 350;
-                    }
-                    else if (weight > 10)
-                    {
-                        priceWeight = 500;
-                    }
-                    else if (price > 5000)
-                    {
-                        priceWeight = 0;
-                    }
-                    else if (weight < 0 || weight == 0)
-                    {
-                        Console.WriteLine("Ошибка, вес не может быть отрицательным");
-                    }
-                    break;
+                
                 case 2:
-                    if (weight <= 1)
-                    {
-                        priceWeight = 200;
-                    }
-                    else if (weight > 1 & weight <= 5)
-                    {
-                        priceWeight = 400;
-                    }
-                    else if (weight > 5 & weight <= 10)
-                    {
-                        priceWeight = 700;
-                    }
-                    else if (weight > 10)
-                    {
-                        priceWeight = 1000;
-                    }
-                    else if (price > 5000)
-                    {
-                        priceWeight = 0;
-                    }
-                    else if (weight < 0 || weight == 0)
-                    {
-                        Console.WriteLine("Ошибка, вес не может быть отрицательным");
-                    }
+                    priceWeight *= 2;
                     break;
                 case 3:
                     priceWeight = 0;
@@ -241,7 +220,7 @@ class Program
                     tip = "Самовывоз";
                     break;
             }
-            //Вывод данных
+            Вывод данных
             Console.WriteLine("Товар: " + name);
             Console.WriteLine("Стоимость товара: " + price + " рублей");
             Console.WriteLine("Вес: " + weight + "кг");
@@ -249,46 +228,163 @@ class Program
             Console.WriteLine("Способ доставки: " + tip);
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("Стоимость доставки: " + priceWeight);
-            Console.WriteLine("Итоговая стоимость: " + (price + priceWeight));
+            Console.WriteLine("Итоговая стоимость: " + (price + priceWeight)); 
 
 
-            //Задание 15
+        //Задание 15
+        Console.WriteLine("Введите своё имя: ");
+        string name = Console.ReadLine();
+        Console.WriteLine("Введите свой возраст: ");
+        int age = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите начальный баланс: ");
+        double balance = double.Parse(Console.ReadLine());
+        Console.WriteLine("Введите тип счёта: 1 - дебетовый, 2 - накопительный, 3 - премиальный");
+        int type = int.Parse(Console.ReadLine());
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.WriteLine("Выберите операцию: 1 - пополнить счёт, 2 - снять деньги, 3 - проверить баланс, 4 - получить информацию о счёте");
+        int operation = int.Parse(Console.ReadLine());
+        string hf = "1";
+        switch (operation)
+        {
+            case 1:
+                Console.WriteLine("На какую сумму вы хотите пополнить счёт?");
+                double replenishment = double.Parse(Console.ReadLine());
+                if (replenishment > 0 && replenishment != 0)
+                {
+                    balance += replenishment;
+                    hf = "пополнение";
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка, сумма не может быть равна нулю или отрицательной");
+                }
+                break;
+            case 2:
+                Console.WriteLine("Какую сумму вы хотите снять?");
+                double removal = double.Parse(Console.ReadLine());
+                if (age < 18)
+                {
+                    if (removal <= 5000)
+                    {
+                        if (removal > 0 && removal != 0)
+                        {
+                            balance -= removal;
+                            hf = "снятие";
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ошибка, сумма не может быть равна нулю или отрицательной");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка, вы не можете снимать больше 5000 рублей, т.к вам меньше 18 лет");
 
-            //Console.WriteLine("Введите своё имя: ");
-            //string imya = Console.ReadLine();
-            //Console.WriteLine("Введите свой возраст: ");
-            //int vozrast = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Введите начальный баланс: ");
-            //double balance = double.Parse(Console.ReadLine());
-            //Console.WriteLine("Введите тип счёта: 1 - дебетовый, 2 - накопительный, 3 - премиальный");
-            //int tipScheta = int.Parse(Console.ReadLine());
-            //Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            //Console.WriteLine("Выберите операцию: 1 - пополнить счёт, 2 - снять деньги, 3 - проверить баланс, 4 - получить информацию о счёте");
-            //int operation = int.Parse(Console.ReadLine());
-            //if (operation == 1)
-            //{
-            //    Console.WriteLine("На какую сумму вы хотите пополнить счёт?");
-            //    double summaPopolneniya = double.Parse(Console.ReadLine());
-            //    if (summaPopolneniya > 0 & summaPopolneniya != 0)
-            //    {
-            //        balance = balance + summaPopolneniya;   
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Ошибка");
-            //    }
 
-            //}
-            //if (operation == 2)
-            //{
-            //    Console.WriteLine("Какую сумму вы хотите снять?");
-            //    double summaSnyatiya = double.Parse(Console.ReadLine());
-            //    if ()
-            //}
-            // НЕДОДЕЛАНО
+                    }
+                }
+                else
+                {
+                    if (removal < balance)
+                    {
+                        if (removal > 0 && removal != 0)
+                        {
+                            balance -= removal;
+                            if (balance < 1000)
+                            {
+                                Console.WriteLine("На вашем счёте осталось менее 1000 рублей");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ошибка, сумма не может быть равна нулю или отрицательной");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка, сумма снятия больше вашего баланса, если вам не хватает денег, предлагаем вам оформить выгодный кредит всего под 200% годовых! Позвоните по номеру - 900");
+                    }
 
+                }
+                break;
+            case 3:
+                Console.WriteLine(balance);
+                hf = "проверка баланса";
+                break;
+            case 4:
+                if (type == 3)
+                {
+                    Console.WriteLine("Вам доступно премиальное обслуживание.");
+                }
+                else
+                {
+                    Console.WriteLine("Ваш счёт: " + type);
+                }
+                hf = "проверка типа счёта";
+                break;
         }
+        //Вывод
+
+        Console.WriteLine("========== БАНК ==========");
+        Console.WriteLine("");
+        Console.WriteLine("Клиент: " + name);
+        Console.WriteLine("Возраст: " + age);
+        Console.WriteLine("Тип счёта: " + type);
+        Console.WriteLine("Баланс: " + balance);
+        Console.WriteLine("");
+        Console.WriteLine("Результат операции: " + hf);
+        Console.WriteLine("=========================="); */
+
+
+//Урок 3
+//Задание 6
+/*Console.WriteLine("Игра Угадай число");
+Console.WriteLine("Вам нужно угадать число от 1 до 100");
+int random = Random.Shared.Next(1, 101);
+int n;
+int h = 0;
+Console.WriteLine("Введите число: ");
+while (true)
+{
+    n = int.Parse(Console.ReadLine());
+    h++;
+    if (n == random)
+    {
+        Console.WriteLine("Вы угадали!");
+        Console.WriteLine("Попыток израсходовано: " + h);
+        break;
     }
-}
+    else if (n<random)
+    {
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.WriteLine("Загаданное число больше");
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
+        
+        
+    }
+    else if (n>random)
+    {
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.WriteLine("Загаданное число меньше");
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
+
+    }
+} 
 
 
+//Задание 12
+using System.Security.Cryptography;
+
+Console.WriteLine("Введите кол-во строк");
+int g = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите кол-во столбцов");
+int k = int.Parse(Console.ReadLine());
+
+for (int i = 0; i<g; i++)
+{
+    for (int j = 0; j<k; j++)
+    {
+        Console.Write("*");
+    }
+    Console.WriteLine();
+} */
