@@ -230,7 +230,7 @@ class Program
 
 
 //Задание 15
-*/Console.WriteLine("Введите своё имя: ");
+Console.WriteLine("Введите своё имя: ");
 string name = Console.ReadLine();
 Console.WriteLine("Введите свой возраст: ");
 int age = int.Parse(Console.ReadLine());
@@ -241,7 +241,7 @@ int type = int.Parse(Console.ReadLine());
 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 Console.WriteLine("Выберите операцию: 1 - пополнить счёт, 2 - снять деньги, 3 - проверить баланс, 4 - получить информацию о счёте");
 int operation = int.Parse(Console.ReadLine());
-string hf = "1";
+string typeOperation = "1";
 
 
 switch (operation)
@@ -255,7 +255,7 @@ switch (operation)
             return;
         }
         balance += replenishment;
-        hf = "пополнение";
+        typeOperation = "пополнение";
         break;
     case 2:
         Console.WriteLine("Какую сумму вы хотите снять?");
@@ -270,20 +270,21 @@ switch (operation)
             Console.WriteLine("Ошибка, сумма снятия больше вашего баланса, если вам не хватает денег, предлагаем вам оформить выгодный кредит всего под 200% годовых! Позвоните по номеру - 900");
             return;
         }
-        balance -= removal;
-        if (age <18 || removal>5000)
+        if (age < 18 && removal > 5000)
         {
             Console.WriteLine("Ошибка, вы не можете снимать больше 5000 рублей, т.к вам меньше 18 лет");
             return;
         }
+        balance -= removal;
         if (balance < 1000)
         {
             Console.WriteLine("На вашем счёте осталось менее 1000 рублей");
         }
+        typeOperation = "Снятие";
         break;
     case 3:
         Console.WriteLine(balance);
-        hf = "проверка баланса";
+        typeOperation = "проверка баланса";
         break;
     case 4:
         if (type == 3)
@@ -294,7 +295,7 @@ switch (operation)
         {
             Console.WriteLine("Ваш счёт: " + type);
         }
-        hf = "проверка типа счёта";
+        typeOperation = "проверка типа счёта";
         break;
 }
 //Вывод
@@ -306,13 +307,13 @@ Console.WriteLine("Возраст: " + age);
 Console.WriteLine("Тип счёта: " + type);
 Console.WriteLine("Баланс: " + balance);
 Console.WriteLine("");
-Console.WriteLine("Результат операции: " + hf);
+Console.WriteLine("Результат операции: " + typeOperation);
 Console.WriteLine("==========================");
 
 
 //Урок 3
 //Задание 6
-/*Console.WriteLine("Игра Угадай число");
+Console.WriteLine("Игра Угадай число");
 Console.WriteLine("Вам нужно угадать число от 1 до 100");
 int random = Random.Shared.Next(1, 101);
 int first;
@@ -320,12 +321,12 @@ int second = 0;
 Console.WriteLine("Введите число: ");
 while (true)
 {
-n = int.Parse(Console.ReadLine());
+first = int.Parse(Console.ReadLine());
 second++;
 if (first == random)
 {
 Console.WriteLine("Вы угадали!");
-Console.WriteLine("Попыток израсходовано: " + h);
+Console.WriteLine("Попыток израсходовано: " + second);
 break;
 }
 else if (first<random)
@@ -347,20 +348,20 @@ Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
 
 
 //Задание 12
-using System.Security.Cryptography;
+*/using System.Security.Cryptography;
 
 Console.WriteLine("Введите кол-во строк");
 int line = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите кол-во столбцов");
 int column = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите символ, из которого нужно сделать прямоугольник: ");
-int symbol = int.Parse(Console.ReadLine());
+string symbol = Console.ReadLine();
 
 for (int i = 0; i<line; i++)
 {
 for (int j = 0; j<column; j++)
 {
-Console.Write("symbol");
+Console.Write(symbol);
 }
 Console.WriteLine();
-} */
+}
