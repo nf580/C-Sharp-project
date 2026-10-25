@@ -348,7 +348,7 @@ Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
 
 
 //Задание 12
-*/using System.Security.Cryptography;
+using System.Security.Cryptography;
 
 Console.WriteLine("Введите кол-во строк");
 int line = int.Parse(Console.ReadLine());
@@ -365,3 +365,131 @@ Console.Write(symbol);
 }
 Console.WriteLine();
 }
+
+
+
+//Урок 4, задание 1
+int first = Random.Shared.Next(1, 101);
+int second = Random.Shared.Next(1, 101);
+int third = Random.Shared.Next(1, 101);
+int four = Random.Shared.Next(1, 101);
+int five = Random.Shared.Next(1, 101);
+int six = Random.Shared.Next(1, 101);
+int seven = Random.Shared.Next(1, 101);
+int eight = Random.Shared.Next(1, 101);
+int nine = Random.Shared.Next(1, 101);
+int ten = Random.Shared.Next(1, 101);
+int[] randomNumbers = new int[10] {first,second,third,four,five,six,seven,eight,nine,ten};
+Console.WriteLine(string.Join(", ", randomNumbers));
+Console.WriteLine("Кол-во элементов: " + randomNumbers.Length); 
+
+//Урок 4, задание 15
+//Создаём отсортированный массив из 1000 элементов
+int[] randomID = new int[1000];
+for (int i = 0; i <  randomID.Length; i++)
+{
+    randomID[i] = Random.Shared.Next(1, 1001);
+}
+Array.Sort(randomID);
+Console.WriteLine("Введите ID товара (от 1 до 1000)");
+int ID = int.Parse(Console.ReadLine());
+bool found = false;
+//Обычный поиск
+for (int i = 0; i < randomID.Length; i++)
+{
+    if (randomID[i] == ID)
+    {
+        Console.WriteLine("===========================");
+        Console.WriteLine("Товар найден!");
+        Console.WriteLine("Обычный поиск: ");
+        Console.WriteLine("Проверено элементов: " + (i + 1));
+        found = true;
+        break;
+    }
+
+}
+
+//Бинарный поиск
+int left = 0;
+int right = randomID.Length - 1;
+int attempts = 0;
+bool binaryFound = false;
+while (left <= right)
+{
+    attempts = attempts + 1;
+    int mid = (left + right) / 2;
+    if (randomID[mid] == ID)
+    {
+        Console.WriteLine("Бинарный поиск: ");
+        Console.WriteLine("Проверено элементов: " + attempts);
+        binaryFound = true;
+        break;
+    }
+    else if (randomID[mid] <ID)
+    {
+        left = mid + 1;
+    }
+    else if (randomID[mid] >ID)
+    {
+        right = mid - 1;
+    }
+    
+}
+if (!found)
+{
+    Console.WriteLine("Товар не найден");
+}
+if (!binaryFound)
+{
+    Console.WriteLine("Бинарный поиск: товар не найден");
+} 
+
+//Задание 1, урок 5
+void PrintHello()
+{
+    Console.WriteLine("Привет! Добро пожаловать в программу.");
+}
+PrintHello();
+
+//Задание 6
+
+int number = 5;
+Console.WriteLine(number);
+void AddTen(ref int number)
+{
+    number = number + 10;
+}
+AddTen(ref number);
+Console.WriteLine(number); 
+
+//Задание 7
+void GetStatistics(int a, int b, int c, out int min, out int max, out int sum, out double average)
+{
+    min = Math.Min(a, Math.Min(b, c));
+    max = Math.Max(a, Math.Max(b, c));
+    sum = a + b + c;
+    average = (a + b + c) / 3;
+}
+Console.WriteLine("Введите первое число: ");
+int first = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите второе число: ");
+int second = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите третье число: ");
+int third = int.Parse(Console.ReadLine());
+
+GetStatistics(first, second, third, out int min, out int max, out int sum, out double average);
+Console.WriteLine("Минимальное число: " + min);
+Console.WriteLine("Максимальное число: " + max);
+Console.WriteLine("Сумма чисел: " + sum);
+Console.WriteLine("Среднее арифметическое чисел: " + average);
+
+//Задание 10
+bool TryCreateOrder(double balance,double productPrice,int quantity,out double totalPrice,out double remainingBalance)
+{
+    if (quantity <=0)
+    {
+        Console.WriteLine("Кол-во не может быть отрицательно или равно нулю!");
+        return false;
+    }
+
+} //НЕ ДОДЕЛАНО
