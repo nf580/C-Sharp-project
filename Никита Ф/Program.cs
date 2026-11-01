@@ -1,4 +1,9 @@
-﻿/*УРОК 1
+﻿using System.IO;
+using System;
+using static System.Net.WebRequestMethods;
+using System.Collections.Generic;
+using System.Linq;
+/*УРОК 1
 Задание 1
 Console.WriteLine("Hello world!");
 Console.WriteLine("Никита");
@@ -298,6 +303,29 @@ switch (operation)
         typeOperation = "проверка типа счёта";
         break;
 }
+balance -= removal;
+if (balance < 1000)
+{
+Console.WriteLine("На вашем счёте осталось менее 1000 рублей");
+}
+typeOperation = "Снятие";
+break;
+case 3:
+Console.WriteLine(balance);
+typeOperation = "проверка баланса";
+break;
+case 4:
+if (type == 3)
+{
+Console.WriteLine("Вам доступно премиальное обслуживание.");
+}
+else
+{
+Console.WriteLine("Ваш счёт: " + type);
+}
+typeOperation = "проверка типа счёта";
+break;
+}
 //Вывод
 
 Console.WriteLine("========== БАНК ==========");
@@ -435,6 +463,16 @@ while (left <= right)
     }
     
 }
+else if (randomID[mid] <ID)
+{
+left = mid + 1;
+}
+else if (randomID[mid] >ID)
+{
+right = mid - 1;
+}
+
+}
 if (!found)
 {
     Console.WriteLine("Товар не найден");
@@ -488,8 +526,195 @@ bool TryCreateOrder(double balance,double productPrice,int quantity,out double t
 {
     if (quantity <=0)
     {
-        Console.WriteLine("Кол-во не может быть отрицательно или равно нулю!");
+        
+        totalPrice = 0;
+        remainingBalance = balance;
         return false;
     }
+    totalPrice = productPrice * quantity;
+    if (totalPrice >balance)
+    {
+        
+        remainingBalance = balance;
+        return false;
+    }
+    else
+    {
+        remainingBalance = balance - totalPrice;
+    }
+    return true;
 
-} //НЕ ДОДЕЛАНО
+}
+Console.WriteLine("Введите ваш баланс: ");
+double balance = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите цену товара: ");
+double productPrice = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите кол-во товара: ");
+int quantity = int.Parse(Console.ReadLine());
+
+
+if (TryCreateOrder(balance, productPrice, quantity, out double totalPrice, out double remainingBalance))
+{
+    Console.WriteLine("========================================");
+    Console.WriteLine("Баланс: " + balance);
+    Console.WriteLine("Цена товара: " +  productPrice);
+    Console.WriteLine("Количество: " +  quantity);
+    Console.WriteLine();
+    Console.WriteLine("Заказ создан!");
+    Console.WriteLine();
+    Console.WriteLine("Стоимость заказа: " +  totalPrice);
+    Console.WriteLine("Остаток: " +  remainingBalance);
+    Console.WriteLine("========================================");
+}
+else
+{
+    Console.WriteLine("========================================");
+    Console.WriteLine("Баланс: " + balance);
+    Console.WriteLine("Цена товара: " + productPrice);
+    Console.WriteLine("Количество: " + quantity);
+    Console.WriteLine();
+    Console.WriteLine("Не удалось сделать заказ.");
+    Console.WriteLine("Недостаточно средств.");
+} 
+
+//Задание 1, урок 6
+int BalanceA = 10000;
+int BalanceB = 5000;
+Console.WriteLine("Сколько вы хотите перевести с первого счёта на второй?");
+int transfer = int.Parse(Console.ReadLine());
+try
+{
+    if (transfer <= 0)
+    {
+        throw new Exception("Сумма перевода должна быть больше нуля!");
+    }
+    if (transfer > BalanceA)
+    {
+        throw new Exception("Недостаточно средств!");
+    }
+    BalanceA -= transfer;
+    BalanceB += transfer;
+
+    Console.WriteLine("Перевод выполнен!");
+    Console.WriteLine($"Баланс отправителя: " + BalanceA);
+    Console.WriteLine($"Баланс получателя: " + BalanceB);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+finally
+{
+    Console.WriteLine("Операция завершена.");
+} 
+
+//Задание 2
+string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+string file = Path.Combine(desktopPath, "data.txt");
+try
+{
+    Console.WriteLine("Открываем файл....");
+    string content = File.ReadAllText(file);
+    Console.WriteLine("Содержимое файла: ");
+    Console.WriteLine(content);
+    Console.WriteLine("==============================================================");
+}
+catch (FileNotFoundException)
+{
+    Console.WriteLine("Файл не найден!");
+
+}
+finally
+{
+    Console.WriteLine("Работа с файлом завершена.");
+} 
+
+//ПРОЕКТ "АНАГРАММА"
+Console.WriteLine("Привет, это игра Анаграмма! На экране появится перемешанное слово, твоя задача - отгадать первоначальное слово.");
+Console.WriteLine("Из скольки букв должно быть слово? (от 3 до 5)");
+int quantity = int.Parse(Console.ReadLine());
+if (quantity < 3 || quantity >5)
+{
+    Console.WriteLine("Ошибка! Число должно быть от 3 до 5");
+    return;
+}
+string[] threeletters = new string[] {"лес", "ель", "лоб", "бог", "рай", "код", "лот", "бок"};
+string[] fourletters = new string[] { "блин", "клуб", "блок", "нота", "коса", "клок", "герб", "мель" };
+string[] fiveletters = new string[] { "ягода", "червь", "шкура", "масло", "запах", "видео", "банан", "архив" };
+int word = Random.Shared.Next(0, 8);
+int attemps = 0;
+
+switch (quantity)
+{
+    case 3:
+        
+        string scrambledword = threeletters[word];
+        string shuffledWord = new string(scrambledword.OrderBy(c => Random.Shared.Next()).ToArray());
+        Console.WriteLine(shuffledWord);
+        Console.WriteLine("Что это за слово? ");
+        
+        while (true)
+        {
+            string guessedword = Console.ReadLine();
+            attemps += 1;
+            if (guessedword == scrambledword)
+            {
+                Console.WriteLine("Вы угадали!");
+                Console.WriteLine("Попыток: " + attemps);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Неправильно, попробуйте ещё раз.");
+            }
+        }
+        break;
+    case 4:
+
+        string fourlettersword = fourletters[word];
+        string shuffledfourlettersWord = new string(fourlettersword.OrderBy(c => Random.Shared.Next()).ToArray());
+        Console.WriteLine(shuffledfourlettersWord);
+        Console.WriteLine("Что это за слово? ");
+        
+        while (true)
+        {
+            string guessedword = Console.ReadLine();
+            attemps += 1;
+            if (guessedword == fourlettersword)
+            {
+                Console.WriteLine("Вы угадали!");
+                Console.WriteLine("Попыток: " + attemps);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Неправильно, попробуйте ещё раз.");
+            }
+        }
+        break;
+    case 5:
+        string fivelettersword = fiveletters[word];
+        string shuffledfivelettersWord = new string(fivelettersword.OrderBy(c => Random.Shared.Next()).ToArray());
+        Console.WriteLine(shuffledfivelettersWord);
+        Console.WriteLine("Что это за слово? ");
+
+        while (true)
+        {
+            string guessedword = Console.ReadLine();
+            attemps += 1;
+            if (guessedword == fivelettersword)
+            {
+                Console.WriteLine("Вы угадали!");
+                Console.WriteLine("Попыток: " + attemps);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Неправильно, попробуйте ещё раз.");
+            }
+        }
+        break;
+} */
+
+//Проект 2, калькулятор
+Console.WriteLine("Введите пример, используя +, -, *, /, (, )");
