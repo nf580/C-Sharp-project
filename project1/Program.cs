@@ -1,5 +1,5 @@
 ﻿//ПРОЕКТ "АНАГРАММА"
-Console.WriteLine("Привет, это игра Анаграмма! На экране появится перемешанное слово, твоя задача - отгадать первоначальное слово.");
+/*Console.WriteLine("Привет, это игра Анаграмма! На экране появится перемешанное слово, твоя задача - отгадать первоначальное слово.");
 Console.WriteLine("Из скольки букв должно быть слово? (от 3 до 5)");
 int quantity = int.Parse(Console.ReadLine());
 if (quantity < 3 || quantity > 5)
@@ -83,4 +83,28 @@ switch (quantity)
             }
         }
         break;
+} */
+
+//Проект 2, калькулятор
+using System.Data;
+using System.Linq.Expressions;
+using System.Reflection.PortableExecutable;
+
+Console.WriteLine("Введите пример, используя +, -, *, /, (, )");
+string example = Console.ReadLine();
+string result = example.Replace(" ", "");
+result = result.Replace("/", "*1.0/");
+try
+{
+    DataTable table = new DataTable();
+
+    
+    object resultat = table.Compute(result, "");
+
+    
+    Console.WriteLine("Результат: " + resultat);
+}
+catch (Exception)
+{
+    Console.WriteLine("Ошибка: Некорректное математическое выражение (проверьте скобки или знаки).");
 }

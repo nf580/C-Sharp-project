@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5", "Lesson5\Lesson5.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6", "Lesson6\Lesson6.csproj", "{06F42CEA-AC9C-4C0D-9C6B-F860FD27D640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project1", "project1\project1.csproj", "{B2B8087D-1723-4504-A0E5-7F690D5C8460}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projects", "project1\projects.csproj", "{B2B8087D-1723-4504-A0E5-7F690D5C8460}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{C3C95BA8-0F22-4B0A-BB79-DFEE4CA13F80}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{C3C95BA8-0F22-4B0A-BB79-DFEE4CA13F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
