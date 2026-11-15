@@ -1,7 +1,5 @@
-﻿/*Проект 2, калькулятор
+﻿//Проект 2, калькулятор
 using System.Data;
-using System.Linq.Expressions;
-using System.Reflection.PortableExecutable;
 
 Console.WriteLine("Введите пример, используя +, -, *, /, (, )");
 string example = Console.ReadLine();
@@ -12,12 +10,12 @@ try
     DataTable table = new DataTable();
 
     
-    object result = table.Compute(result, "");
+    object result2 = table.Compute(result, "");
 
     
-    Console.WriteLine("Результат: " + result);
+    Console.WriteLine("Результат: " + result2);
 }
 catch (Exception)
 {
     Console.WriteLine("Ошибка: Некорректное математическое выражение (проверьте скобки или знаки).");
-} */
+} 

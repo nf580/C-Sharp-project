@@ -1,7 +1,7 @@
 ﻿
 // УРОК 1
 //Задание 1
-Console.WriteLine("Hello world!");
+/*Console.WriteLine("Hello world!");
 Console.WriteLine("Никита");
 
 //Задание 2
@@ -76,4 +76,4 @@ int c = 2;
 int fifty = a * b;
 Console.WriteLine(fifty);
 int hundred = a * b * c;
-Console.WriteLine(hundred);
+Console.WriteLine(hundred); */

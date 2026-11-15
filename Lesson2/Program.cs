@@ -53,7 +53,7 @@ double weight = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите расстояние доставки (в метрах): ");
 double distance = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите способ доставки: 1 - Обычная, 2 - Экспресс, 3 - Самовывоз");
-int type = int.Parse(Console.ReadLine());
+int deliverytype = int.Parse(Console.ReadLine());
 int priceWeight = 0;
 string tip = "Обычная";
 //Обработка данных
@@ -61,7 +61,7 @@ string tip = "Обычная";
 
 
 
-if (type > 3 && type < 1)
+if (deliverytype > 3 && deliverytype < 1)
 {
     Console.WriteLine("Ошибка, вводите либо 1, либо 2, либо 3");
     return;
@@ -92,28 +92,21 @@ else if (weight <= 0)
 }
 
 //Стоимость
-switch (type)
-{
-
-    case 2:
-        priceWeight *= 2;
-        break;
-    case 3:
-        priceWeight = 0;
-        break;
-}
-switch (type)
+switch (deliverytype)
 {
     case 1:
         tip = "Обычная";
         break;
     case 2:
+        priceWeight *= 2;
         tip = "Экспресс";
         break;
     case 3:
+        priceWeight = 0;
         tip = "Самовывоз";
         break;
 }
+
 //Вывод данных
 Console.WriteLine("Товар: " + name);
 Console.WriteLine("Стоимость товара: " + price + " рублей");
@@ -127,13 +120,13 @@ Console.WriteLine("Итоговая стоимость: " + (price + priceWeight
 
 //Задание 15
 Console.WriteLine("Введите своё имя: ");
-string name = Console.ReadLine();
+string namee = Console.ReadLine();
 Console.WriteLine("Введите свой возраст: ");
 int age = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите начальный баланс: ");
 double balance = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите тип счёта: 1 - дебетовый, 2 - накопительный, 3 - премиальный");
-int type = int.Parse(Console.ReadLine());
+int type2 = int.Parse(Console.ReadLine());
 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 Console.WriteLine("Выберите операцию: 1 - пополнить счёт, 2 - снять деньги, 3 - проверить баланс, 4 - получить информацию о счёте");
 int operation = int.Parse(Console.ReadLine());
@@ -183,7 +176,7 @@ switch (operation)
         typeOperation = "проверка баланса";
         break;
     case 4:
-        if (type == 3)
+        if (type2 == 3)
         {
             Console.WriteLine("Вам доступно премиальное обслуживание.");
         }
@@ -199,9 +192,9 @@ switch (operation)
 
 Console.WriteLine("========== БАНК ==========");
 Console.WriteLine("");
-Console.WriteLine("Клиент: " + name);
+Console.WriteLine("Клиент: " + namee);
 Console.WriteLine("Возраст: " + age);
-Console.WriteLine("Тип счёта: " + type);
+Console.WriteLine("Тип счёта: " + type2);
 Console.WriteLine("Баланс: " + balance);
 Console.WriteLine("");
 Console.WriteLine("Результат операции: " + typeOperation);
