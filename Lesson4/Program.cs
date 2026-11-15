@@ -1,5 +1,5 @@
 ﻿//Урок 4, задание 1
-int first = Random.Shared.Next(1, 101);
+/*int first = Random.Shared.Next(1, 101);
 int second = Random.Shared.Next(1, 101);
 int third = Random.Shared.Next(1, 101);
 int four = Random.Shared.Next(1, 101);
@@ -72,4 +72,4 @@ if (!found)
 if (!binaryFound)
 {
     Console.WriteLine("Бинарный поиск: товар не найден");
-}
+} */

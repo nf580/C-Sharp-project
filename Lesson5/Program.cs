@@ -1,5 +1,5 @@
 ﻿//Задание 1, урок 5
-void PrintHello()
+/*void PrintHello()
 {
     Console.WriteLine("Привет! Добро пожаловать в программу.");
 }
@@ -91,4 +91,4 @@ else
     Console.WriteLine();
     Console.WriteLine("Не удалось сделать заказ.");
     Console.WriteLine("Недостаточно средств.");
-}
+} */

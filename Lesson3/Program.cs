@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 //Урок 3
 //Задание 6
-Console.WriteLine("Игра Угадай число");
+/*Console.WriteLine("Игра Угадай число");
 Console.WriteLine("Вам нужно угадать число от 1 до 100");
 int random = Random.Shared.Next(1, 101);
 int first;
@@ -52,4 +52,4 @@ for (int i = 0; i < line; i++)
         Console.Write(symbol);
     }
     Console.WriteLine();
-}
+} */

@@ -1,5 +1,5 @@
 ﻿//Задание 1, урок 6
-int BalanceA = 10000;
+/*int BalanceA = 10000;
 int BalanceB = 5000;
 Console.WriteLine("Сколько вы хотите перевести с первого счёта на второй?");
 int transfer = int.Parse(Console.ReadLine());
@@ -48,4 +48,4 @@ catch (FileNotFoundException)
 finally
 {
     Console.WriteLine("Работа с файлом завершена.");
-}
+} */
